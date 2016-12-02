@@ -9,8 +9,7 @@ RUN apt-get update && \
     gcc-avr \
     avr-libc \
     avrdude \
-    arduino-core \
-    package2 && \
+    arduino-core && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
