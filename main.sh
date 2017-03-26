@@ -11,7 +11,7 @@ elif [ "$1" = "upload" ]
     ino upload
 elif [ "$1" = "serial" ]
     ino serial
-elif
+else
     echo '[-] Command not found '$1
     exit -1
 fi
