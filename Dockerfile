@@ -23,6 +23,8 @@ RUN apt-get update && \
 
 RUN pip install ino
 
+WORKDIR /src
+
 VOLUME /src
 WORKDIR /src
 
