@@ -14,6 +14,21 @@ then
     ino init
     # Git ignore
     echo '.build' >> .gitignore
+    # gitlab-ci
+    cat > .gitlab-ci.yml << EOF
+.gitlab-ci.yml 
+image: registry.thestorm.com.br/docker/dev-arduino
+
+build:
+  stage: build
+  script: 
+    - ino build
+    - cp .build/uno/firmware.hex .
+  artifacts:
+      name: 'firmaware-${CI_BUILD_REF_NAME}-${CI_BUILD_ID}'
+      paths:
+          - firmware.hex
+EOF
     git add *
     git commit -a -m 'Initial project setup'
 elif [ "$1" = "build" ]
