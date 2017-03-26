@@ -6,6 +6,9 @@ RUN apt-get update && \
     apt-get upgrade -y && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y \
     build-essential \
+    python \
+    python-pip \
+    picocom \
     gcc-avr \
     avr-libc \
     avrdude \
@@ -14,8 +17,8 @@ RUN apt-get update && \
     rm -rf /var/lib/apt/lists/*
 
 
-VOLUME /data
-WORKDIR /data
+VOLUME /src
+WORKDIR /src
 
 COPY main.sh /
 
