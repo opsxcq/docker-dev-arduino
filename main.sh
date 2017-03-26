@@ -14,6 +14,8 @@ then
     ino init
     # Git ignore
     echo '.build' >> .gitignore
+    git add *
+    git commit -a -m 'Initial project setup'
 elif [ "$1" = "build" ]
 then
     ino build
@@ -23,6 +25,9 @@ then
 elif [ "$1" = "serial" ]
 then
     ino serial
+elif [ "$1" = "sh" ]
+then
+    bash
 else
     echo '[-] Command not found '$1
     exit -1
