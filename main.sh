@@ -30,6 +30,7 @@ build:
           - firmware.hex
 EOF
     git add *
+    git add .*
 elif [ "$1" = "build" ]
 then
     ino build
