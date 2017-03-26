@@ -30,7 +30,6 @@ build:
           - firmware.hex
 EOF
     git add *
-    git commit -a -m 'Initial project setup'
 elif [ "$1" = "build" ]
 then
     ino build
