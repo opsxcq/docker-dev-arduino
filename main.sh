@@ -30,7 +30,8 @@ build:
           - firmware.hex
 EOF
     git add *
-    git add .*
+    git add .gitignore
+    git add .gitlab-ci.yml
 elif [ "$1" = "build" ]
 then
     ino build
