@@ -10,8 +10,8 @@ then
         mkdir "$2"
         cd "$2"
     fi
-    git init
     ino init
+    git init
     # Git ignore
     echo '.build' >> .gitignore
     # gitlab-ci
