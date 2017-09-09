@@ -1,5 +1,5 @@
 variables:
-    PUBLIC_TAG: 'strm/arduino-temperature'
+    PUBLIC_TAG: 'strm/dev-arduino'
 
 stages:
     - build

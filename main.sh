@@ -16,7 +16,7 @@ then
     echo '.build' >> .gitignore
     # gitlab-ci
     cat > .gitlab-ci.yml << EOF
-image: registry.thestorm.com.br/docker/dev-arduino
+image: strm/dev-arduino
 
 build:
   stage: build
